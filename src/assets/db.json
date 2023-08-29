@@ -1,0 +1,14 @@
+{
+  "barchart": [
+    {
+      "country": "America",
+      "valuenumber": 23,
+      "id": 1
+    },
+    {
+      "country": "UK",
+      "valuenumber": 67,
+      "id": 2
+    }
+  ]
+}

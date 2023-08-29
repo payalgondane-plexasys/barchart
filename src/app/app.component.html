@@ -1,0 +1,22 @@
+<div class="container-scroller mainpage" id="mainpage">
+    <!-- partial:partials/_navbar.html -->
+    <app-header *ngIf="showNavbar"></app-header>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <app-sidebar *ngIf="showSidebar"></app-sidebar>
+        <!-- partial -->
+        <div class="main-panel" [ngClass]="{ 'main-panel-only' : !showSidebar }">
+            <div class="content-wrapper">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <app-footer *ngIf="showFooter"></app-footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->

@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <!-- Breadcrumb -->
+
+    <div class="page-header">
+        <div class="breadcrum-title section-title">
+          <h2>Dashboard</h2>
+          <ul class="common-breadcrum list-inline ">
+            <li class="list-inline-item ">
+                <a routerLink="/">Home </a>
+            </li> 
+            <li class="list-inline-item">Barchart</li>
+          </ul>
+        </div>
+    </div>
+    
+    <div class="main-content-wrapper">
+        <div class="widgets-card">
+            <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-start align-items-center mb-3 ">
+                <div class="col">
+                    <div class="card ">                       
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center ">
+                                <div>
+                                    <p class="text-uppercase ">Active Users</p>
+                                    <h2>108</h2>
+                                    <small>Total Active Users</small>
+                                </div>
+                                <div class="ms-auto counter-icon ">
+                                    <i class="bx bx-user "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center ">
+                                <div>
+                                    <p class="text-uppercase ">Returning Users</p>
+                                    <h2>52</h2>
+                                    <small>Returning user</small>
+                                </div>
+                                <div class="ms-auto counter-icon ">
+                                    <i class="bx bx-user-check "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center ">
+                                <div>
+                                    <p class="text-uppercase ">Queuing Feature Users</p>
+                                    <h2>64</h2>
+                                    <small>Total user</small>
+                                </div>
+                                <div class="ms-auto counter-icon ">
+                                    <i class="bx bx-user-plus "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widgets-card">
+            <div class="card">
+                <div class="card-header">
+                    <h6>Details</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-custom">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Country Name</th>
+                                    <th>Value</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let singledata of chartData">
+                                    <td>{{ singledata.country }}</td>
+                                    <td>{{ singledata.valuenumber }}</td>
+                                    <td class="text-center">
+                                      <button type="button" class="btn p-0 m-0"><i (click)="deleteRow(singledata.id)" class="fa fa-trash text-danger"> Remove </i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <app-barchart></app-barchart>
+    </div>
+</div>

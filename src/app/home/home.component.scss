@@ -1,0 +1,37 @@
+@import "../../assets/css/variables";
+.counter-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* line-height: 3.5rem; */
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 7px;
+    box-shadow: -7px 7px 3px #01273514;
+    background-color: $goldenochre-color;
+    i {
+        color: $bulishblack-color;
+    }
+}
+.table-responsive{
+.table-custom {
+    thead {
+        background-color: $bulishblack-color;
+        tr {
+            th {
+                vertical-align: middle;
+                text-align: center;
+                padding: 0.2rem 0.7rem;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: .9rem;
+                vertical-align: middle;
+                padding: 0.2rem 0.7rem;
+            }
+        }
+    }    
+}
+}
